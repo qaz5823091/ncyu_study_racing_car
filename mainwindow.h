@@ -24,6 +24,10 @@ class MainWindow : public QMainWindow
 
         void on_button_start_game_clicked();
 
+        void on_action_close_game_triggered();
+
+        void on_action_start_game_triggered();
+
 private:
         Ui::MainWindow *ui;
 
@@ -39,7 +43,10 @@ private:
 
         void game_start();
         void game_stop();
+        void game_pause();
         void move_car();
         void move_blocks();
+        void detect_blocks();
+        bool is_collision(int x, int y);
 };
 #endif // MAINWINDOW_H

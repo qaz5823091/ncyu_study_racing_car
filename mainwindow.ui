@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>躲避車 - 嘉大資工課外讀書會</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/src/icon.ico</normaloff>:/src/icon.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="background">
@@ -239,6 +243,18 @@
      <pixmap resource="image.qrc">:/src/item2.png</pixmap>
     </property>
    </widget>
+   <zorder>background</zorder>
+   <zorder>block_06</zorder>
+   <zorder>block_05</zorder>
+   <zorder>block_04</zorder>
+   <zorder>block_03</zorder>
+   <zorder>block_02</zorder>
+   <zorder>block_01</zorder>
+   <zorder>label_title</zorder>
+   <zorder>car</zorder>
+   <zorder>button_start_game</zorder>
+   <zorder>label_distance</zorder>
+   <zorder>lcd_clock</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -249,7 +265,28 @@
      <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menustart_game">
+    <property name="title">
+     <string>選單</string>
+    </property>
+    <addaction name="action_start_game"/>
+    <addaction name="action_close_game"/>
+   </widget>
+   <addaction name="menustart_game"/>
   </widget>
+  <action name="action_start_game">
+   <property name="text">
+    <string>開始遊戲</string>
+   </property>
+  </action>
+  <action name="action_close_game">
+   <property name="text">
+    <string>關閉遊戲</string>
+   </property>
+   <property name="toolTip">
+    <string>關閉遊戲</string>
+   </property>
+  </action>
  </widget>
  <resources>
   <include location="image.qrc"/>
